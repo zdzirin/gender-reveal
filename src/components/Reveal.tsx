@@ -36,10 +36,12 @@ const CLIPPINGS = [
     },
 ];
 
-/* The mount is the same at both sizes, so it lives in one place. */
-function MountedScan({ pad }: { pad: string }) {
+/* The mount is the same at both sizes, so it lives in one place. The
+   captions only earn their space in the enlarged view. */
+function MountedScan({ pad, labelled }: { pad: string; labelled?: boolean }) {
     return (
         <div className={`mat mat-blue mat-lift tear-c ${pad}`}>
+            {labelled && <p className="scan-label mb-2">baby z</p>}
             <div className="relative bg-floral-white p-2">
                 <img
                     src={babyZ}
@@ -48,6 +50,9 @@ function MountedScan({ pad }: { pad: string }) {
                 />
                 <div className="photo-corners pointer-events-none absolute inset-0" />
             </div>
+            {labelled && (
+                <p className="scan-label mt-2">{"09'10'2026"}</p>
+            )}
         </div>
     );
 }
@@ -103,7 +108,7 @@ export default function Reveal() {
                     className="flex h-full w-full cursor-zoom-out items-center justify-center p-4"
                 >
                     <div className="w-[min(86vw,25rem)] rotate-1">
-                        <MountedScan pad="[--mat-pad:1rem]" />
+                        <MountedScan pad="[--mat-pad:1rem]" labelled />
                     </div>
                 </div>
             </dialog>

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,6 +11,31 @@
             rel="stylesheet"
         />
         <title>What's Baby Zirin's Gender?</title>
+        <meta
+            name="description"
+            content="Madison and Zachary are having a baby. Care to guess?"
+        />
+
+        <!-- Link previews. The absolute URL comes from VITE_SITE_URL in .env,
+             which is the one place to change after deploying. iMessage needs
+             og:image to be absolute and publicly reachable. -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Baby Zirin" />
+        <meta property="og:title" content="What's Baby Zirin's Gender?" />
+        <meta
+            property="og:description"
+            content="Madison and Zachary are having a baby. Care to guess?"
+        />
+        <meta property="og:url" content="%VITE_SITE_URL%/" />
+        <meta property="og:image" content="%VITE_SITE_URL%/og.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+            property="og:image:alt"
+            content="A paper card reading: I think Madison and Zachary will have a..."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
     </head>
     <body>
         <div id="root"></div>

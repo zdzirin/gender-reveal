@@ -386,6 +386,22 @@ html {
         var(--drop-delay, 0ms) both;
 }
 
+/* Ultrasound machines print their captions in monospace, so the album label
+   borrows that. A white chip rather than white-on-blue: wisteria is light
+   enough that white type on it sits near 3:1, which is thin for something
+   this small. */
+.scan-label {
+    width: fit-content;
+    margin-inline: auto;
+    padding: 0.2rem 0.75rem 0.15rem;
+    background: var(--floral-white);
+    color: var(--vintage-grape);
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    letter-spacing: 0.12em;
+    box-shadow: 0 1px 2px color-mix(in srgb, var(--shadow-ink) 22%, transparent);
+}
+
 /* Native <dialog> + showModal() gives the top layer, Esc to close, focus
    trapping and an inert background for free. Sizing it to the full viewport
    means a click anywhere outside the photo lands on the closer. */
