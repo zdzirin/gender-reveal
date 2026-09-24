@@ -50,9 +50,7 @@ function MountedScan({ pad, labelled }: { pad: string; labelled?: boolean }) {
                 />
                 <div className="photo-corners pointer-events-none absolute inset-0" />
             </div>
-            {labelled && (
-                <p className="scan-label mt-2">{"09'10'2026"}</p>
-            )}
+            {labelled && <p className="scan-label mt-2">{"09'10'2026"}</p>}
         </div>
     );
 }
@@ -96,7 +94,7 @@ export default function Reveal() {
 
             <div className="tape drop-in [--drop-delay:560ms] [--drop-spin:-10deg] -rotate-2">
                 <div className="mat tear-b [--mat-pad:1.1rem]">
-                    <p className="ink text-xl sm:text-2xl">See you April 8th</p>
+                    <p className="ink text-xl sm:text-2xl">See you April 6th</p>
                 </div>
             </div>
 
